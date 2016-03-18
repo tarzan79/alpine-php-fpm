@@ -1,6 +1,7 @@
 ############################################################
 # Dockerfile to build php-fpm container images
 # Based on ARM distrib for Raspberry
+<<<<<<< HEAD
 # https://hub.docker.com/r/matriphe/alpine-php/
 ############################################################
 
@@ -74,3 +75,33 @@ WORKDIR /var/www
 
 # Entry point
 #ENTRYPOINT ["/usr/bin/php-fpm"]
+=======
+############################################################
+
+
+FROM alpine:latest
+
+RUN apk --update add \
+        php-dom \
+        php-ctype \
+        php-curl \
+        php-fpm \
+        php-gd \
+        php-iconv \
+        php-intl \
+        php-json \
+        php-opcache \
+        php-pdo \
+        php-pdo_mysql \
+        php-posix \
+        php-xml \
+    && rm -rf /var/cache/apk/*
+
+#COPY php.ini /etc/php/conf.d/50-setting.ini
+#COPY php-fpm.conf /etc/php/php-fpm.conf
+
+VOLUME /www
+EXPOSE 9000
+
+CMD ["php-fpm", "-F"]
+>>>>>>> alpine-php-fpm/master
