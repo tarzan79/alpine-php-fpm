@@ -6,7 +6,7 @@
 
 
 # Use Alpine Linux
-FROM tarzan79/alpine-base:latest
+FROM tarzan79/alpine-base:arm
 
 # Timezone
 ENV TIMEZONE Europe/Paris
