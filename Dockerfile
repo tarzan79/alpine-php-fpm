@@ -8,6 +8,7 @@
 # Use Alpine Linux
 FROM tarzan79/alpine-base:arm
 
+
 # Timezone
 ENV TIMEZONE Europe/Paris
 ENV PHP_MEMORY_LIMIT 512M
