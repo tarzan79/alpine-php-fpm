@@ -6,7 +6,7 @@
 
 
 # Use Alpine Linux
-FROM scaleway/alpine
+FROM tarzan79/alpine-base:arm
 
 
 # Timezone
