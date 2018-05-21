@@ -3,11 +3,14 @@ services:
     php-fpm:
         image: tarzan79/alpine-php-fpm
         volumes:
-            - db:/var/lib/mysql //mysql library
+            - db:/var/lib/mysql #mysql library
         restart: always
         networks:
-            - db // links to database container
-            - front // links to server container (apache, nginx, etc)
+            - db #links to database container
+            - front #links to server container (apache, nginx, etc)
         ports:
             - 9000
         command: "/usr/bin/php-fpm"
+volumes:
+    db:
+    front:
